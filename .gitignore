@@ -1,0 +1,9 @@
+bundle/YouCompleteMe
+bundle/Command-T
+bundle/syntastic
+bundle/ultisnips
+bundle/vim-snippets
+bundle/nerdcommenter
+
+*.swp
+.netrwhist*
