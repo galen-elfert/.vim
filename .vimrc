@@ -161,7 +161,7 @@ if has("gui_running")
   let g:gruvbox_contrast_light='medium'
   colorscheme gruvbox
   set background=dark
-  set guifont=ProggyCleanTT\ 13
+  "set guifont=ProggyCeanTT\ 13
   " autocmd VimEnter * :NERDTree
   " gvim system paste:
   nnoremap <leader>p "+gP
@@ -169,4 +169,17 @@ if has("gui_running")
   set guioptions-=T
 else
   colorscheme koehler
+endif
+
+" OS specific
+if has("unix")
+  let s:uname = system("uname -s")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    set guifont=ProggyCleanTT:h16
+  set noantialias
+  endif
+  if s:uname == "Linux\n"
+    set guifont=ProggyCeanTT\ 13
+  endif
 endif
